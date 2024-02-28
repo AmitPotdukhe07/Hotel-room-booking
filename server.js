@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 dotenv.config();
+
 import express, { json } from 'express';
 import log from 'morgan';
 import cors from 'cors';
@@ -35,6 +36,7 @@ app.use((err, req, res, next) => {
 app.use('/api/v1', bookingsRoute);
 app.use('/api/v1', userRoute);
 app.use('/api/v1', availibilityRouter);
+
 
 app.listen(process.env.PORT, () => {
     console.log(`Service is running on ${process.env.PORT} port.`);
