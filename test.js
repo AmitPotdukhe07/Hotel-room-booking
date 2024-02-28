@@ -5,6 +5,7 @@ const loadImageAsBlob = async (imageUrl) => {
         return blob;
     } catch (error) {
         console.error('Error converting image to Blob:', error);
+        console.error('Error converting image to Blob:', error);
         throw error;
     }
 };
